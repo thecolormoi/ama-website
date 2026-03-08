@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Alabama Music Academy | Hazel Green, AL | 256-231-4085"
+  description="Contact Alabama Music Academy for music lessons in Hazel Green, AL. Call 256-231-4085. Located at 12945 Highway 231-431 North. Serving Huntsville, Madison, and North Alabama."
+  canonicalPath="/contact"
+>
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-1.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/40"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get in Touch</h1>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto">Ready to start music lessons? Have questions? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info + Map -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Contact Details -->
+      <div>
+        <h2 class="text-2xl font-bold text-primary mb-6">Contact Information</h2>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-bold text-primary mb-1">Phone</h3>
+            <a href="tel:256-231-4085" class="text-lg text-secondary hover:text-secondary-light transition-colors font-semibold">256-231-4085</a>
+            <p class="text-gray-500 text-sm mt-1">Call or text to book a lesson or ask questions</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-primary mb-1">Email</h3>
+            <a href="mailto:info@alabamamusicacademy.com" class="text-secondary hover:text-secondary-light transition-colors">info@alabamamusicacademy.com</a>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-primary mb-1">Location</h3>
+            <p class="text-gray-600">Flint River Baptist Church</p>
+            <p class="text-gray-600">12945 Highway 231-431 North</p>
+            <p class="text-gray-600">Hazel Green, AL 35750</p>
+            <a href="https://maps.google.com/?q=12945+Highway+231-431+North+Hazel+Green+AL+35750" target="_blank" rel="noopener" class="text-secondary text-sm hover:text-secondary-light transition-colors mt-1 inline-block">Get Directions &rarr;</a>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-primary mb-1">Hours of Operation</h3>
+            <div class="text-gray-600 space-y-1">
+              <div class="flex justify-between max-w-xs">
+                <span>Monday</span>
+                <span class="font-medium">10:00 AM - 8:00 PM</span>
+              </div>
+              <div class="flex justify-between max-w-xs">
+                <span>Tuesday</span>
+                <span class="font-medium">10:00 AM - 8:00 PM</span>
+              </div>
+              <div class="flex justify-between max-w-xs">
+                <span>Wednesday</span>
+                <span class="text-gray-400">Closed</span>
+              </div>
+              <div class="flex justify-between max-w-xs">
+                <span>Thursday</span>
+                <span class="font-medium">10:00 AM - 8:00 PM</span>
+              </div>
+              <div class="flex justify-between max-w-xs">
+                <span>Friday - Sunday</span>
+                <span class="text-gray-400">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="tel:256-231-4085" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+            Call to Book a Lesson
+          </a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div>
+        <h2 class="text-2xl font-bold text-primary mb-6">Find Us</h2>
+        <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <iframe
+            title="Alabama Music Academy location on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.5!2d-86.5722!3d34.9334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDU2JzAwLjIiTiA4NsKwMzQnMTkuOSJX!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="mt-6 bg-warm-gray rounded-xl p-6">
+          <h3 class="font-bold text-primary mb-2">Serving North Alabama</h3>
+          <p class="text-gray-600 text-sm">We're conveniently located on Highway 231/431 in Hazel Green, with easy access from Huntsville, Madison, Meridianville, New Market, and the surrounding Madison County area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-16 md:py-20 text-white text-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-4.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/45"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start With a $30 Trial Lesson</h2>
+      <p class="text-gray-200 text-lg mb-8">No commitment, no contracts. Just a great first lesson to see if Alabama Music Academy is the right fit.</p>
+      <a href="tel:256-231-4085" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Call 256-231-4085
+      </a>
+    </div>
+  </section>
+</Layout>

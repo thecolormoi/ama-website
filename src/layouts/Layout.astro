@@ -1,0 +1,200 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  schema?: string;
+}
+
+const { title, description, canonicalPath = "", schema } = Astro.props;
+const canonicalURL = `https://www.alabamamusicacademy.com${canonicalPath}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Alabama Music Academy" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-AL" />
+    <meta name="geo.placename" content="Hazel Green, Alabama" />
+    <meta name="geo.position" content="34.9334;-86.5722" />
+    <meta name="ICBM" content="34.9334, -86.5722" />
+
+    <title>{title}</title>
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MusicSchool",
+      "name": "Alabama Music Academy",
+      "url": "https://www.alabamamusicacademy.com",
+      "telephone": "+1-256-231-4085",
+      "email": "info@alabamamusicacademy.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12945 Highway 231-431 North",
+        "addressLocality": "Hazel Green",
+        "addressRegion": "AL",
+        "postalCode": "35750",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.9334,
+        "longitude": -86.5722
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Thursday"],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "$120-$240/month",
+      "areaServed": [
+        {"@type": "City", "name": "Hazel Green", "containedInPlace": {"@type": "State", "name": "Alabama"}},
+        {"@type": "City", "name": "Huntsville", "containedInPlace": {"@type": "State", "name": "Alabama"}},
+        {"@type": "City", "name": "Madison", "containedInPlace": {"@type": "State", "name": "Alabama"}},
+        {"@type": "City", "name": "Meridianville", "containedInPlace": {"@type": "State", "name": "Alabama"}},
+        {"@type": "City", "name": "New Market", "containedInPlace": {"@type": "State", "name": "Alabama"}}
+      ],
+      "sameAs": [
+        "https://www.facebook.com/AlabamaMusicAcademy"
+      ],
+      "description": "Alabama Music Academy offers private music lessons in guitar, bass, piano, and voice for all ages in Hazel Green, AL. Serving Huntsville, Madison, and Madison County.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Music Lessons",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Guitar Lessons"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bass Lessons"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Piano Lessons"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voice Lessons"}}
+        ]
+      }
+    })} />
+
+    {schema && <script type="application/ld+json" set:html={schema} />}
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Top Bar -->
+    <div class="bg-primary text-white text-sm py-2">
+      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+        <span>Serving Huntsville, Madison, Hazel Green &amp; North Alabama</span>
+        <div class="flex gap-4 items-center">
+          <a href="tel:256-231-4085" class="hover:text-secondary transition-colors">256-231-4085</a>
+          <a href="mailto:info@alabamamusicacademy.com" class="hover:text-secondary transition-colors hidden sm:inline">info@alabamamusicacademy.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/images/logo-icon.jpg" alt="Alabama Music Academy logo" class="h-10 w-10 rounded-full" />
+          <span class="text-xl font-bold text-primary">Alabama Music Academy</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div id="nav-links" class="hidden md:flex items-center gap-8">
+          <a href="/" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+          <a href="/lessons" class="text-gray-700 hover:text-primary font-medium transition-colors">Lessons</a>
+          <a href="/teachers" class="text-gray-700 hover:text-primary font-medium transition-colors">Teachers</a>
+          <a href="/musical-ladder" class="text-gray-700 hover:text-primary font-medium transition-colors">Musical Ladder</a>
+          <a href="/contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+          <a href="tel:256-231-4085" class="bg-secondary text-white px-5 py-2 rounded-lg font-semibold hover:bg-secondary-light transition-colors">Book a Trial</a>
+        </div>
+      </nav>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pb-4">
+        <a href="/" class="block py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+        <a href="/lessons" class="block py-2 text-gray-700 hover:text-primary font-medium">Lessons</a>
+        <a href="/teachers" class="block py-2 text-gray-700 hover:text-primary font-medium">Teachers</a>
+        <a href="/musical-ladder" class="block py-2 text-gray-700 hover:text-primary font-medium">Musical Ladder</a>
+        <a href="/contact" class="block py-2 text-gray-700 hover:text-primary font-medium">Contact</a>
+        <a href="tel:256-231-4085" class="block mt-2 text-center bg-secondary text-white px-5 py-2 rounded-lg font-semibold">Book a Trial</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+      <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">Alabama Music Academy</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">North Alabama's choice for private music lessons. Guitar, bass, piano, and voice lessons for all ages and skill levels.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Hours &amp; Location</h3>
+          <p class="text-gray-300 text-sm">Monday: 10:00 AM - 8:00 PM</p>
+          <p class="text-gray-300 text-sm">Tuesday: 10:00 AM - 8:00 PM</p>
+          <p class="text-gray-300 text-sm">Thursday: 10:00 AM - 8:00 PM</p>
+          <p class="text-gray-300 text-sm mt-3">
+            <a href="https://maps.google.com/?q=12945+Highway+231-431+North+Hazel+Green+AL+35750" target="_blank" rel="noopener" class="hover:text-secondary transition-colors underline">
+              12945 Highway 231-431 North<br />Hazel Green, AL 35750
+            </a>
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <p class="text-gray-300 text-sm">
+            <a href="tel:256-231-4085" class="hover:text-secondary transition-colors">256-231-4085</a>
+          </p>
+          <p class="text-gray-300 text-sm mt-1">
+            <a href="mailto:info@alabamamusicacademy.com" class="hover:text-secondary transition-colors">info@alabamamusicacademy.com</a>
+          </p>
+          <div class="mt-4">
+            <a href="https://www.facebook.com/AlabamaMusicAcademy" target="_blank" rel="noopener" aria-label="Facebook" class="text-gray-300 hover:text-secondary transition-colors">
+              <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-4">
+        <p class="text-center text-gray-400 text-sm">&copy; {new Date().getFullYear()} Alabama Music Academy, LLC. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

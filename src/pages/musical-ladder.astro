@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Musical Ladder System?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Musical Ladder System is a 13-level progression program used at Alabama Music Academy. Students earn wristbands and trophies as they advance through levels from Apprentice (3 months) to Prima (60 months), providing clear goals and motivation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do students advance through Musical Ladder levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Students take a skill assessment at each level milestone. Their instructor evaluates their progress and advances them to the next level when they're ready. Each new level earns a colored wristband to celebrate the achievement."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title="Musical Ladder Program | Track Your Progress | Alabama Music Academy"
+  description="Alabama Music Academy's Musical Ladder System features 13 levels of achievement for music students. Earn wristbands and trophies as you progress from Apprentice to Prima."
+  canonicalPath="/musical-ladder"
+  schema={faqSchema}
+>
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/mls-hero.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/40"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">The Musical Ladder System</h1>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto">A proven 13-level progression system that keeps students motivated, celebrates achievements, and makes every milestone visible. Alabama Music Academy is the only school in the state using this program.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">How It Works</h2>
+      <div class="rounded-xl overflow-hidden mb-12 max-w-3xl mx-auto img-tint">
+        <img src="/images/mls-hero.jpg" alt="Music student playing piano wearing colorful Musical Ladder wristbands" class="w-full h-72 md:h-96 object-cover" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-secondary">1</span>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-2">Take Lessons</h3>
+          <p class="text-gray-600">Your instructor works with you each week, building your skills and preparing you for the next level.</p>
+        </div>
+        <div>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-secondary">2</span>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-2">Test Your Skills</h3>
+          <p class="text-gray-600">When you're ready, your instructor gives you a quick skill check. Pass, and you move up.</p>
+        </div>
+        <div>
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-secondary">3</span>
+          </div>
+          <h3 class="font-bold text-primary text-lg mb-2">Earn Your Wristband</h3>
+          <p class="text-gray-600">Each level earns a colored wristband. It's a tangible reward students can wear and be proud of.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 13 Levels -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-primary text-center mb-4">The 13 Levels</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">Each level earns a colored wristband. At higher levels, students also earn trophies and certificates personalized with their name.</p>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 p-4 md:p-8">
+        <img src="/images/mls-levels-chart.png" alt="Musical Ladder System chart showing all 13 wristband levels from Apprentice to Prima with corresponding colors and trophies" class="w-full" />
+      </div>
+      <div class="mt-8 rounded-xl overflow-hidden img-tint">
+        <img src="/images/mls-about.jpg" alt="Colorful Musical Ladder wristbands displayed on piano keys showing Apprentice, Prima, and other levels" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Trophies -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Earn Trophies at the Highest Levels</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-10">Students who reach the advanced levels — Rockstar, Prodigy, Master, Champion, and Prima — earn custom trophies personalized with their name and school.</p>
+      <div class="rounded-xl overflow-hidden max-w-lg mx-auto img-tint">
+        <img src="/images/mls-student-1.jpg" alt="Musical Ladder System trophies for Champion, Prima, Prodigy, and Master levels" class="w-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">Why the Musical Ladder Matters</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Keeps Students Motivated</h3>
+          <p class="text-gray-600">Clear goals and tangible rewards give students something concrete to work toward. No more wondering "am I getting better?"</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Parents See the Progress</h3>
+          <p class="text-gray-600">Wristbands and level milestones make progress visible. Parents don't have to guess — they can see the advancement.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Builds Long-Term Commitment</h3>
+          <p class="text-gray-600">Students who see their progress are students who stick with it. The ladder system turns "I'm learning music" into "I'm on level 7."</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Only in Alabama at AMA</h3>
+          <p class="text-gray-600">Alabama Music Academy is the only music school in the state of Alabama using the Musical Ladder System. It's one of the things that makes us different.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-primary text-center mb-10">Musical Ladder FAQ</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl p-6 shadow-sm group" open>
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            What is the Musical Ladder System?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">It's a 13-level progression program that tracks student growth from beginner (Apprentice) all the way to our highest level (Prima at 60 months). Students earn colored wristbands at each level, giving them a tangible symbol of their progress.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            How do students move up?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">When a student's instructor feels they're ready, they'll do a quick skill assessment. It's low-pressure — just a check-in to confirm the student has the skills for the next level. Pass, and they earn their new wristband.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            Is this available for all instruments?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">Yes. The Musical Ladder System applies to guitar, bass, piano, and voice. Every student at Alabama Music Academy participates regardless of their instrument.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-16 md:py-20 text-white text-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-1.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/45"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Start Climbing the Ladder</h2>
+      <p class="text-gray-200 text-lg mb-8">Book a $30 trial lesson and take the first step toward your Apprentice wristband.</p>
+      <a href="tel:256-231-4085" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Book a Trial Lesson
+      </a>
+    </div>
+  </section>
+</Layout>

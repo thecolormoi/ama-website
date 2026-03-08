@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Our Music Instructors | Alabama Music Academy | Hazel Green, AL"
+  description="Alabama Music Academy's instructors are background-checked, experienced musicians who tailor every lesson to the student. Guitar, bass, piano, and voice teachers in Hazel Green, AL."
+  canonicalPath="/teachers"
+>
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-5.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/40"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Instructors</h1>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto">Experienced, background-checked musicians who are passionate about helping every student grow.</p>
+    </div>
+  </section>
+
+  <!-- Safety & Trust -->
+  <section class="py-12 bg-warm-gray">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-2xl font-bold text-primary mb-1">Background Checked</p>
+          <p class="text-gray-600 text-sm">Every instructor has passed a thorough background check</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-2xl font-bold text-primary mb-1">Open-Door Policy</p>
+          <p class="text-gray-600 text-sm">Parents can observe any lesson at any time</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-2xl font-bold text-primary mb-1">See-Through Studios</p>
+          <p class="text-gray-600 text-sm">Every studio door has a window for visibility</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Our Team Different -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-4">What Makes Our Team Different</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">At Alabama Music Academy, the experience doesn't depend on one person. Every instructor on our team meets the same high standards — so your student gets a great lesson every time.</p>
+
+      <div class="rounded-xl overflow-hidden mb-12 img-tint">
+        <img src="/images/banner-2.jpg" alt="Music instructor teaching guitar to a student at Alabama Music Academy" class="w-full h-72 md:h-96 object-cover" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Qualified Musicians</h3>
+          <p class="text-gray-600">Our instructors hold music degrees and/or have years of professional performance and teaching experience. They know their instruments inside and out.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Personalized to Every Student</h3>
+          <p class="text-gray-600">No cookie-cutter curriculum. Our teachers build lesson plans around each student's goals, skill level, and the music they actually want to play.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Patient With All Ages</h3>
+          <p class="text-gray-600">Whether it's a 6-year-old picking up a guitar for the first time or an adult learning piano later in life, our instructors meet students where they are.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="font-bold text-primary text-lg mb-2">Student Safety First</h3>
+          <p class="text-gray-600">Every instructor is background-checked. Studios have see-through windows. Parents are always welcome to sit in. No exceptions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instruments We Teach -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Instruments We Teach</h2>
+      <p class="text-gray-600 mb-10">Our team covers four core instruments. We'll match you with the right instructor for your goals.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="/lessons#guitar" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+          <div class="h-32 rounded-lg overflow-hidden mb-3 img-tint">
+            <img src="/images/section-4.jpg" alt="Guitar lessons" class="w-full h-full object-cover" />
+          </div>
+          <p class="font-bold text-primary">Guitar</p>
+        </a>
+        <a href="/lessons#bass" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+          <div class="h-32 rounded-lg overflow-hidden mb-3 img-tint">
+            <img src="/images/section-7.jpg" alt="Bass lessons" class="w-full h-full object-cover" />
+          </div>
+          <p class="font-bold text-primary">Bass</p>
+        </a>
+        <a href="/lessons#piano" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+          <div class="h-32 rounded-lg overflow-hidden mb-3 img-tint">
+            <img src="/images/section-2.jpg" alt="Piano lessons" class="w-full h-full object-cover" />
+          </div>
+          <p class="font-bold text-primary">Piano</p>
+        </a>
+        <a href="/lessons#voice" class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+          <div class="h-32 rounded-lg overflow-hidden mb-3 img-tint">
+            <img src="/images/section-5.jpg" alt="Voice lessons" class="w-full h-full object-cover" />
+          </div>
+          <p class="font-bold text-primary">Voice</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-16 md:py-20 text-white text-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-3.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/45"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-gray-200 text-lg mb-8">Book a $30 trial lesson and we'll match you with the right instructor for your instrument and goals.</p>
+      <a href="tel:256-231-4085" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Book a Trial Lesson
+      </a>
+    </div>
+  </section>
+</Layout>

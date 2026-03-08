@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much do music lessons cost at Alabama Music Academy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30-minute weekly lessons are $120/month, and 60-minute weekly lessons are $240/month. We also offer a $30 trial lesson so you can try before you commit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What instruments can I learn at Alabama Music Academy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer private lessons in guitar (acoustic and electric), bass guitar, piano, and voice for students of all ages and skill levels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Alabama Music Academy located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are located at Flint River Baptist Church, 12945 Highway 231-431 North, Hazel Green, AL 35750. We serve students from Huntsville, Madison, Meridianville, and all of North Alabama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to sign a long-term contract for lessons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Alabama Music Academy operates on a month-to-month basis with no semester minimums or long-term contracts required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your music teachers background checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every instructor at Alabama Music Academy has passed a background check. Student safety is our top priority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can parents watch the lessons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We have an open-door policy. Every studio has see-through windows, and parents are welcome to observe at any time."
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title="Music Lessons in Huntsville & Hazel Green, AL | Alabama Music Academy"
+  description="Alabama Music Academy offers private guitar, bass, piano, and voice lessons for all ages in Hazel Green, AL. Serving Huntsville, Madison, and North Alabama. $30 trial lesson."
+  canonicalPath=""
+  schema={faqSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-primary text-white py-20 md:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-2.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/40"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        Music Lessons for Every Age<br class="hidden md:block" /> in North Alabama
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+        Private guitar, bass, piano, and voice lessons in Hazel Green, AL. No contracts, no semester minimums — just great music instruction.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:256-231-4085" class="bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+          Book a $30 Trial Lesson
+        </a>
+        <a href="/lessons" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/10 transition-colors">
+          View Our Lessons
+        </a>
+      </div>
+      <p class="mt-4 text-gray-300 text-sm">Call or text: 256-231-4085</p>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <section class="py-12 bg-warm-gray">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-bold text-primary">5+</p>
+          <p class="text-gray-600 text-sm mt-1">Expert Instructors</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-primary">100+</p>
+          <p class="text-gray-600 text-sm mt-1">Active Students</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-primary">4</p>
+          <p class="text-gray-600 text-sm mt-1">Instruments Offered</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-primary">13</p>
+          <p class="text-gray-600 text-sm mt-1">Musical Ladder Levels</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instruments Overview -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What Would You Like to Learn?</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">From beginners picking up an instrument for the first time to experienced players looking to level up, we meet you where you are.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/lessons#guitar" class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all text-center border border-gray-100">
+          <div class="h-40 rounded-lg overflow-hidden mb-4 img-tint">
+            <img src="/images/section-4.jpg" alt="Guitar lessons at Alabama Music Academy" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Guitar</h3>
+          <p class="text-gray-600 text-sm">Acoustic &amp; electric guitar for all skill levels</p>
+        </a>
+        <a href="/lessons#bass" class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all text-center border border-gray-100">
+          <div class="h-40 rounded-lg overflow-hidden mb-4 img-tint">
+            <img src="/images/section-7.jpg" alt="Bass lessons at Alabama Music Academy" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Bass</h3>
+          <p class="text-gray-600 text-sm">Learn the backbone of every great band</p>
+        </a>
+        <a href="/lessons#piano" class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all text-center border border-gray-100">
+          <div class="h-40 rounded-lg overflow-hidden mb-4 img-tint">
+            <img src="/images/section-2.jpg" alt="Piano lessons at Alabama Music Academy" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Piano</h3>
+          <p class="text-gray-600 text-sm">Classical, pop, jazz — your style, your pace</p>
+        </a>
+        <a href="/lessons#voice" class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-all text-center border border-gray-100">
+          <div class="h-40 rounded-lg overflow-hidden mb-4 img-tint">
+            <img src="/images/section-5.jpg" alt="Voice lessons at Alabama Music Academy" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">Voice</h3>
+          <p class="text-gray-600 text-sm">Find your unique sound with vocal coaching</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose AMA -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">Why Families Choose Alabama Music Academy</h2>
+      <div class="rounded-xl overflow-hidden mb-10 max-w-3xl mx-auto img-tint">
+        <img src="/images/banner-4.jpg" alt="Young student smiling during a guitar lesson at Alabama Music Academy" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">No Contracts</h3>
+          <p class="text-gray-600">Month-to-month lessons with no semester minimums. Stay because you love it, not because you're locked in.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">Background-Checked Teachers</h3>
+          <p class="text-gray-600">Every instructor passes a background check. Our studios have see-through windows and an open-door policy for parents.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">Musical Ladder System</h3>
+          <p class="text-gray-600">Our 13-level progression system keeps students motivated with wristbands, trophies, and clear milestones to celebrate.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">Personalized Instruction</h3>
+          <p class="text-gray-600">One-on-one private lessons tailored to each student's goals, learning style, and favorite music.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">Recitals &amp; Performance</h3>
+          <p class="text-gray-600">Optional recitals give students a chance to perform and build confidence. Free to participate — no pressure.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-3">Convenient Location</h3>
+          <p class="text-gray-600">Located on Highway 231/431 in Hazel Green — easy access from Huntsville, Madison, Meridianville, and New Market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Simple, Transparent Pricing</h2>
+      <p class="text-gray-600 mb-10 max-w-xl mx-auto">No hidden fees, no contracts. Just straightforward monthly pricing for quality music education.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <p class="text-secondary font-bold text-sm uppercase tracking-wide mb-2">Try It Out</p>
+          <p class="text-4xl font-extrabold text-primary">$30</p>
+          <p class="text-gray-600 mt-2">One-time trial lesson</p>
+          <p class="text-gray-500 text-sm mt-1">30 minutes</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-md border-2 border-secondary relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
+          <p class="text-secondary font-bold text-sm uppercase tracking-wide mb-2">Weekly Lessons</p>
+          <p class="text-4xl font-extrabold text-primary">$120</p>
+          <p class="text-gray-600 mt-2">per month</p>
+          <p class="text-gray-500 text-sm mt-1">30-minute lessons</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <p class="text-secondary font-bold text-sm uppercase tracking-wide mb-2">Extended Lessons</p>
+          <p class="text-4xl font-extrabold text-primary">$240</p>
+          <p class="text-gray-600 mt-2">per month</p>
+          <p class="text-gray-500 text-sm mt-1">60-minute lessons</p>
+        </div>
+      </div>
+      <a href="tel:256-231-4085" class="inline-block mt-10 bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Start With a $30 Trial
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-xl p-6 shadow-sm group" open>
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            How much do music lessons cost?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">30-minute weekly lessons are $120/month, and 60-minute weekly lessons are $240/month. We also offer a $30 trial lesson so you can try before you commit. No contracts or semester minimums.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            What instruments do you teach?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">We offer private lessons in guitar (acoustic and electric), bass guitar, piano, and voice for students of all ages and skill levels.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            Where are you located?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">We're at Flint River Baptist Church, 12945 Highway 231-431 North, Hazel Green, AL 35750. Easy to reach from Huntsville, Madison, Meridianville, and New Market.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            Do I need to sign a long-term contract?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">No. We operate month-to-month with no long-term contracts or semester minimums. You're free to stop anytime.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            Are your teachers background checked?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">Yes. Every instructor at Alabama Music Academy has passed a background check. Student safety is our top priority. We also have see-through windows on every studio door and an open-door policy for parents.</p>
+        </details>
+        <details class="bg-white rounded-xl p-6 shadow-sm group">
+          <summary class="font-bold text-primary cursor-pointer flex justify-between items-center">
+            Can parents watch the lessons?
+            <span class="text-secondary group-open:rotate-45 transition-transform text-2xl">+</span>
+          </summary>
+          <p class="text-gray-600 mt-3">Absolutely. We have an open-door policy. Every studio has see-through windows, and parents are welcome to observe at any time.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative py-16 md:py-20 text-white text-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/banner-3.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/45"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Music Journey?</h2>
+      <p class="text-gray-200 text-lg mb-8">Book a $30 trial lesson and discover why families across North Alabama trust Alabama Music Academy.</p>
+      <a href="tel:256-231-4085" class="inline-block bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Call 256-231-4085 to Get Started
+      </a>
+    </div>
+  </section>
+</Layout>

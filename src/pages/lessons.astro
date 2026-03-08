@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const serviceSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Music Lessons at Alabama Music Academy",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Guitar Lessons in Hazel Green, AL",
+        "provider": {"@type": "MusicSchool", "name": "Alabama Music Academy"},
+        "description": "Private acoustic and electric guitar lessons for beginners through advanced players. Learn chords, scales, music theory, and your favorite songs.",
+        "areaServed": "Huntsville, Madison, Hazel Green, North Alabama"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Bass Lessons in Hazel Green, AL",
+        "provider": {"@type": "MusicSchool", "name": "Alabama Music Academy"},
+        "description": "Private bass guitar lessons covering technique, groove, music theory, and performance skills for all levels.",
+        "areaServed": "Huntsville, Madison, Hazel Green, North Alabama"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Piano Lessons in Hazel Green, AL",
+        "provider": {"@type": "MusicSchool", "name": "Alabama Music Academy"},
+        "description": "Private piano lessons in classical, pop, jazz, and more. Learn at your own pace with personalized instruction.",
+        "areaServed": "Huntsville, Madison, Hazel Green, North Alabama"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Voice Lessons in Hazel Green, AL",
+        "provider": {"@type": "MusicSchool", "name": "Alabama Music Academy"},
+        "description": "Private vocal coaching covering technique, breath control, performance skills, and finding your unique voice.",
+        "areaServed": "Huntsville, Madison, Hazel Green, North Alabama"
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title="Music Lessons in Hazel Green & Huntsville, AL | Guitar, Bass, Piano, Voice"
+  description="Private guitar, bass, piano, and voice lessons for all ages at Alabama Music Academy. 30-minute and 60-minute options. No contracts. Serving Huntsville, Madison, and Hazel Green, AL."
+  canonicalPath="/lessons"
+  schema={serviceSchema}
+>
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/music-class.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-primary/40"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Music Lessons for All Ages &amp; Skill Levels</h1>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto">Whether you're picking up an instrument for the first time or looking to sharpen your skills, our instructors tailor every lesson to you.</p>
+    </div>
+  </section>
+
+  <!-- Guitar -->
+  <section id="guitar" class="py-16 md:py-20 scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-5xl">🎸</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Guitar Lessons</h2>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Acoustic &amp; Electric Guitar for Beginners Through Advanced Players</h3>
+      <div class="rounded-xl overflow-hidden mb-6 img-tint">
+        <img src="/images/section-4.jpg" alt="Close-up of hands playing acoustic guitar at Alabama Music Academy" class="w-full h-64 object-cover" />
+      </div>
+      <p class="text-gray-600 mb-4">Guitar is our most popular instrument at Alabama Music Academy. Whether your goal is strumming campfire songs, shredding solos, or writing your own music, our guitar instructors will build a lesson plan around what excites you.</p>
+      <h4 class="font-bold text-primary mt-6 mb-2">What You'll Learn</h4>
+      <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Chords, strumming patterns, and fingerpicking</li>
+        <li>Scales, lead guitar, and improvisation</li>
+        <li>Music theory applied to songs you love</li>
+        <li>Performance and stage presence</li>
+      </ul>
+      <h4 class="font-bold text-primary mt-6 mb-2">Who Is This For?</h4>
+      <p class="text-gray-600">Kids, teens, and adults of all skill levels. We start where you are and go at your pace.</p>
+    </div>
+  </section>
+
+  <hr class="max-w-4xl mx-auto border-gray-200" />
+
+  <!-- Bass -->
+  <section id="bass" class="py-16 md:py-20 scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-5xl">🎸</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Bass Lessons</h2>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Learn the Instrument That Holds Every Band Together</h3>
+      <div class="rounded-xl overflow-hidden mb-6 img-tint">
+        <img src="/images/section-7.jpg" alt="Student playing bass guitar during a lesson at Alabama Music Academy" class="w-full h-64 object-cover" />
+      </div>
+      <p class="text-gray-600 mb-4">The bass is the heartbeat of every great song. Our bass lessons cover everything from foundational technique to advanced groove and music theory, giving you the skills to lock in with any band or play on your own.</p>
+      <h4 class="font-bold text-primary mt-6 mb-2">What You'll Learn</h4>
+      <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Fingerstyle and pick technique</li>
+        <li>Groove, timing, and rhythm fundamentals</li>
+        <li>Scales, arpeggios, and walking bass lines</li>
+        <li>Playing with a band and reading charts</li>
+      </ul>
+      <h4 class="font-bold text-primary mt-6 mb-2">Who Is This For?</h4>
+      <p class="text-gray-600">Complete beginners to experienced players. Whether you want to jam with friends or join a band, we'll help you get there.</p>
+    </div>
+  </section>
+
+  <hr class="max-w-4xl mx-auto border-gray-200" />
+
+  <!-- Piano -->
+  <section id="piano" class="py-16 md:py-20 scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-5xl">🎹</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Piano Lessons</h2>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Classical, Pop, Jazz — Learn Piano Your Way</h3>
+      <div class="rounded-xl overflow-hidden mb-6 img-tint">
+        <img src="/images/section-2.jpg" alt="Hands playing piano keys during a lesson at Alabama Music Academy" class="w-full h-64 object-cover" />
+      </div>
+      <p class="text-gray-600 mb-4">Piano doesn't have to be stuffy or overwhelming. Our instructors take a hands-on approach, getting you playing songs early while building the theory and technique you need to keep growing.</p>
+      <h4 class="font-bold text-primary mt-6 mb-2">What You'll Learn</h4>
+      <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Proper hand position and technique</li>
+        <li>Reading sheet music and chord charts</li>
+        <li>Music theory, scales, and ear training</li>
+        <li>Songs in the style you love — classical, pop, jazz, worship, and more</li>
+      </ul>
+      <h4 class="font-bold text-primary mt-6 mb-2">Who Is This For?</h4>
+      <p class="text-gray-600">All ages, from young beginners to adult learners picking it up for the first time (or the tenth).</p>
+    </div>
+  </section>
+
+  <hr class="max-w-4xl mx-auto border-gray-200" />
+
+  <!-- Voice -->
+  <section id="voice" class="py-16 md:py-20 scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-5xl">🎤</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Voice Lessons</h2>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Find Your Unique Sound With Professional Vocal Coaching</h3>
+      <div class="rounded-xl overflow-hidden mb-6 img-tint">
+        <img src="/images/section-5.jpg" alt="Vocalist performing with guitar at Alabama Music Academy" class="w-full h-64 object-cover" />
+      </div>
+      <p class="text-gray-600 mb-4">Whether you want to sing in a choir, perform on stage, or just feel confident singing along to your favorite songs, our voice instructors will help you build technique and confidence.</p>
+      <h4 class="font-bold text-primary mt-6 mb-2">What You'll Learn</h4>
+      <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>Breath control and vocal projection</li>
+        <li>Pitch accuracy and ear training</li>
+        <li>Vocal range extension and tone development</li>
+        <li>Performance skills and microphone technique</li>
+      </ul>
+      <h4 class="font-bold text-primary mt-6 mb-2">Who Is This For?</h4>
+      <p class="text-gray-600">Singers of all levels and ages — from shy beginners to performers looking to level up.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Reminder -->
+  <section class="py-16 md:py-20 bg-warm-gray">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-6">Lesson Pricing</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-extrabold text-primary">$30</p>
+          <p class="text-gray-600 mt-1">Trial Lesson (30 min)</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md border-2 border-secondary">
+          <p class="text-3xl font-extrabold text-primary">$120<span class="text-lg font-normal text-gray-500">/mo</span></p>
+          <p class="text-gray-600 mt-1">30-Minute Weekly Lessons</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <p class="text-3xl font-extrabold text-primary">$240<span class="text-lg font-normal text-gray-500">/mo</span></p>
+          <p class="text-gray-600 mt-1">60-Minute Weekly Lessons</p>
+        </div>
+      </div>
+      <p class="text-gray-500 text-sm mt-6">No contracts. No semester minimums. Month-to-month.</p>
+      <a href="tel:256-231-4085" class="inline-block mt-8 bg-secondary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-secondary-light transition-colors">
+        Book a $30 Trial Lesson
+      </a>
+    </div>
+  </section>
+</Layout>
